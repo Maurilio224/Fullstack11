@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML Lesson</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HTML Lesson</title>
+  <style>
+    label {
+      display: block;
+    }
+    article {
+      background-image: url("./assets/laptop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 450px;
+      max-width: 600px;
+      padding: 10px;
+      text-align: center;
+    }
+    article * {
+      color: #ffffff
+    }
+    article p {
+backdrop-filter: blur(8px);
+}
+  </style>
+</head>
+
+<body>
+  <article>
+    <h1>I giovani e il computer</h1>
+    <br><br><br><br><br>
+    <p>Sempre più giovani al giorno d' oggi preferiscono un laptop rispetto ad un computer fisso <br>
+      per le maggiori possibilita di utilizzo anche all'esterno e la versatilita <br>
+       che offre agli studenti infinite possibilita </p>
+  </article>
+  <h3>iscriviti per ricevere aggiornamenti</h3>
+  <form>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+    <label for="surname">Cognome</label>
+    <input type="text" id="surname" name="surname">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit"> Iscriviti</button>
+  </form>
+  <footer>
+    <p>
+      Autore: Maurilio Farina &nbsp; &nbsp;
+      <a href="mailto:farina.maurilio93@gmail.com">mailto:farina.maurilio93@gmail.com</a>
+    </p>
+  </footer>
+</body>
+
 </html>
