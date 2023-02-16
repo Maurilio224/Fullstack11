@@ -1,0 +1,37 @@
+li,
+h2,
+ul {
+    color: white;
+    display: inline-block
+}
+
+li {
+
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#dropdown {
+    background-color: rgb(39, 36, 36);
+    color: white;
+    border-color: rgb(39, 36, 36);
+
+}
+
+
+.navbar-right {
+    text-align: right;
+}
+
+nav {
+    background-color: rgb(39, 36, 36);
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
