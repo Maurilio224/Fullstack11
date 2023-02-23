@@ -22,8 +22,34 @@ a {
 
 }
 
+.disabled {
+    border: none;
+    background-color: rgb(39, 36, 36);
+    color: rgb(89, 84, 84);
+}
 
+.input {
+    font-size: 16pt;
+    width: 255px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.submit {
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border-color: rgb(72, 210, 72);
+    color: rgb(72, 210, 72);
+    background-color: rgb(39, 36, 36);
+}
+.submit:hover{
+background-color:  rgb(72, 210, 72);
+color: white;
+}
 .navbar-right {
+
     text-align: right;
 }
 
@@ -35,3 +61,18 @@ nav {
     justify-content: space-between;
     padding: 15px;
 }
+@media screen and (max-width:768px) {
+   
+    ul,
+    .input,
+    button {
+       display: none;
+    }
+   
+    .hamburger div {
+       width: 30px;
+       height: 3px;
+       background-color: rgb(72, 210, 72);
+       margin: 5px 0;
+    }
+   }
