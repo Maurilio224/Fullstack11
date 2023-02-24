@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+.container {
+    background-color: gray;
+    width: 400px;
+    height: auto;
+    display: grid;
+    border-radius: 15px;
+
+}
+
+.operator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2px;
+}
+
+div {
+    display: grid;
+    grid-gap: 2px;
+    text-align: center;
+}
+.operator-number {
+    background-color: rgb(211, 243, 243);
+    width: auto;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+.number {
+    background-color: whitesmoke;
+    width: auto;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.result {
+    color: white;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-right: 20px;;
+    text-align: end;
+    height: 50px;
+    background-color: rgb(75, 70, 70);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.result-number {
+    background-color: rgb(245, 134, 153);
+    width: auto;
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 127px;
+    border-bottom-right-radius: 15px;
+}
+#left-border {
+    border-bottom-left-radius: 15px;;
+}
