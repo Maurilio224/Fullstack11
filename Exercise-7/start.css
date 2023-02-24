@@ -1,0 +1,40 @@
+.grid-box{
+    display: grid;
+   /* grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 400px 100px;*/
+    grid-template-areas:
+    "green1 green1 green1 green1"
+    "yellow2 red3 blue5 blue5"
+    "orange4 orange4 blue5 blue5"
+    "orange4 orange4 blue5 blue5";
+    
+}
+#green{
+    grid-area: green1;
+}
+#yellow{
+    display: grid;
+    grid-area: yellow2;
+}
+#red{
+    display: grid;
+    grid-area: red3;
+}
+#orange{
+    grid-area: orange4;
+}
+#blue{
+    grid-area: blue5;
+}
+#yellow ul{
+    display: grid;
+    grid-template-areas: 
+    "li li"
+    "li li";
+}
+#red ul{
+    display: grid;
+    grid-template-areas: 
+    "li li"
+    "li li";
+}
