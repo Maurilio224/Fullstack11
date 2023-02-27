@@ -11,7 +11,7 @@
     --card-radius: 15px;
 
     --card-foto-height: 300px;
-    --card-foto-width: 100%;
+    --card-foto-width: 350px;
 }
 
 .card * {
@@ -44,7 +44,7 @@ main {
 }
 
 .card {
-    width: 25%;
+    width: 350px;
     display: flex;
     flex-direction: column;
     /*background-color: var(--color-background);
@@ -133,4 +133,22 @@ main {
 }
 .card-icon span{
     font-size: 36px; 
+}
+@media (max-width: 768px) {
+    main {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
