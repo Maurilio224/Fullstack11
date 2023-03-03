@@ -1,0 +1,32 @@
+.exercise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+.exercise .exercise-title {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.exercise section {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 1rem 1rem;
+}
+.exercise section article {
+  text-align: center;
+  min-height: 100px;
+  width: 25%;
+  padding: 1rem 1rem;
+  border: 1px solid green;
+}
+.exercise section article:nth-child(even) {
+  color: red;
+}
+.exercise section article:nth-child(odd) {
+  color: blue;
+}
+
+/*# sourceMappingURL=style-new.css.map */
