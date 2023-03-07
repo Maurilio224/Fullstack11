@@ -1,0 +1,114 @@
+@use'utils' as utils;
+
+$base-color: #fff;
+$color-number:#000;
+$font-sizes: 1rem, 2rem, 3rem;
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+@each $fs in $font-sizes {
+    .fs-#{$fs} {
+        font-size: $fs;
+    }
+}
+
+@mixin decorator($border-color: none, $text-color: black, $font-size: 1rem) {
+
+    border: utils.rem(1) solid $border-color;
+    color: $text-color;
+    font-size: $font-size;
+
+
+}
+
+%h-style {
+    color: $color-tertiary;
+}
+
+.exercise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include decorator($color-primary);
+    padding: utils.rem(16);
+
+    & .exercise-title {
+        text-decoration: underline;
+        text-decoration-color: $color-secondary ;
+        @extend %h-style;
+
+    }
+
+    & .exercise-subtitle {
+        @extend %h-style;
+        padding: utils.rem(16);
+        border: utils.rem(1) solid $color-primary;
+    }
+
+    section.group {
+        display: flex;
+        align-items: center;
+
+        article {
+            text-align: center;
+            min-height: utils.rem(100);
+            width: 25%;
+            padding: utils.rem(16);
+
+            &:nth-child(even) {
+                @include decorator($color-tertiary, $color-primary)
+            }
+
+            &:nth-child(odd) {
+                @include decorator($color-tertiary, $color-secondary)
+            }
+        }
+    }
+
+    section.full-width {
+        width: 100%;
+        margin: utils.rem(16) 0 0 0;
+
+        article {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: utils.rem(100);
+            padding: utils.rem(16) utils.rem(32);
+            @include decorator($color-secondary, $color-tertiary, utils.rem(24));
+        }
+
+    }
+}
+
+.numbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: utils.rem(16);
+
+
+
+    @for $i from 1 to 20 {
+        & div:nth-child(#{$i}) {
+            @if $i ==10 {
+                background-color: $color-secondary;
+                color: $color-primary;
+            }
+
+            @else {
+                background-color: darken($base-color, $i * 5%);
+                color: lighten($color-number, $i * 5%);
+            }
+        }
+    }
+
+    & div {
+        height: utils.rem(45);
+        width: utils.rem(45);
+        border: utils.rem(1) solid $color-primary;
+    }
+}

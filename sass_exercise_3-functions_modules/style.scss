@@ -1,0 +1,65 @@
+@use'utils' as utils;
+
+
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+@mixin decorator($border-color: none, $text-color: black, $font-size: 1rem) {
+
+    border: utils.rem(1) solid $border-color;
+    color: $text-color;
+    font-size: $font-size;
+
+
+}
+
+.exercise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include decorator($color-primary);
+    padding: utils.rem(16);
+
+    .exercise-title {
+        color: $color-tertiary;
+        text-decoration: underline;
+        text-decoration-color: $color-secondary ;
+    }
+
+    section.group {
+        display: flex;
+        align-items: center;
+
+        article {
+            text-align: center;
+            min-height: utils.rem(100);
+            width: 25%;
+            padding: utils.rem(16);
+
+            &:nth-child(even) {
+                @include decorator($color-tertiary, $color-primary)
+            }
+
+            &:nth-child(odd) {
+                @include decorator($color-tertiary, $color-secondary)
+            }
+        }
+    }
+
+    section.full-width {
+        width: 100%;
+        margin: utils.rem(16) 0 0 0;
+
+        article {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: utils.rem(100);
+            padding: utils.rem(16) utils.rem(32);
+            @include decorator($color-secondary, $color-tertiary, utils.rem(24));
+        }
+
+    }
+}
