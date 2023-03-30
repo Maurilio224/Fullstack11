@@ -4,6 +4,6 @@ function multiplyByTwo(value) {
     return number * value
 
   }
-  return inner()
+  return inner
 }
-console.log(multiplyByTwo(4));
+console.log(multiplyByTwo(4)());
