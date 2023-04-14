@@ -2,7 +2,7 @@ const number = 15;
 
 const myPromise = new Promise((resolve,reject) => {
     if (number > 10) {
-        resolve("resolved");
+        resolve(number);
     } else {
         reject("rejected");
     }
