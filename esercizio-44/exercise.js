@@ -5,5 +5,6 @@ const user = {
 };
 
 localStorage.setItem("user",JSON.stringify(user));
+const storage = localStorage.getItem("user");
 
-
+console.log(JSON.parse(storage))
